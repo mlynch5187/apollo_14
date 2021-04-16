@@ -2,4 +2,8 @@ Average Age: <%= @astronauts.average(:age) %>
 
 <% @astronauts.each do |astronaut| %>
   Name: <%= astronaut.name %>, Age: <%= astronaut.age %>, Job: <%= astronaut.job %>
+  <% astronaut.missions.each do |mission| %>
+  <br>
+  Mission: <%= mission.title %>, Time In Space: <%= mission.time_in_space %> hours
+  <% end %>
 <% end %>
