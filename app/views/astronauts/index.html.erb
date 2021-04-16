@@ -1,3 +1,5 @@
+Average Age: <%= @astronauts.average(:age) %>
+
 <% @astronauts.each do |astronaut| %>
   Name: <%= astronaut.name %>, Age: <%= astronaut.age %>, Job: <%= astronaut.job %>
 <% end %>
